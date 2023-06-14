@@ -76,7 +76,7 @@ In this lab, you will:
     </copy>
     ```
     
-    The installation script **JMS_&lt;your-fleet-name&gt;_Linux.sh** should be displayed.
+    The installation script **JMS\_your-fleet-name\_linux.sh** should be displayed.
     ![image of novnc terminal downloads directory](images/novnc-terminal-downloads-dir.png)
 
 15. Proceed to **Task 3** to install the management agent.
@@ -84,7 +84,7 @@ In this lab, you will:
 
 ## Task 2: (Optional) Transfer installation script to the compute instance using Cloud Shell 
 
-1. This task makes use of OCI Cloud Shell to use SSH to connect to the compute instance. If you have completed task 1, please skip this task and proceed to **Task 3**.
+1. This task makes use of OCI Cloud Shell to use SSH to connect to the compute instance. If you have completed Task 1, please skip this task and proceed to **Task 3**.
 
    >**NOTE:** For this task, you can also use your own preferred command line interface to perform the same tasks. However, we recommend using OCI Cloud Shell instead if your local machine has network restrictions and proxies preventing SSH connections. 
 
@@ -146,7 +146,15 @@ In this lab, you will:
 1. You should now have a terminal / cloud shell open and connected to the instance. Ensure that you are in the directory where the installation script is located.
     >**NOTE:** If you have downloaded the installation script in **Task 1**, please ensure that the terminal is in the Downloads directory. (Step 12 of **Task 1**)
 
-2. Enter the following command to change file permissions.
+2. Enter the following command to update the oracle cloud agent version.
+
+     ```
+     <copy>
+     sudo yum update oracle-cloud-agent -y
+     </copy>
+     ```
+   
+3. Enter the following command to change file permissions.
 
      ```
      <copy>
@@ -154,7 +162,7 @@ In this lab, you will:
      </copy>
      ```
 
-3. Enter the following command to run the installation script. The installation may take around 10 minutes to complete. Please do not close your browser, Cloud Shell or your terminal while the installation is taking place.
+4. Enter the following command to run the installation script. The installation may take around 10 minutes to complete. Please do not close your browser, Cloud Shell or your terminal while the installation is taking place.
 
      ```
      <copy>
@@ -162,18 +170,18 @@ In this lab, you will:
      </copy>
      ```
 
-4. If installation is successful, you'll see a message similar to the following:
+5. If installation is successful, you'll see a message similar to the following:
 
-     ```
-     ...
-     Management Agent installation has been completed.
-     Management Agent plugin 'Java Management Service' installation has been completed.
-     Management Agent plugin 'Java Usage Tracking' installation has been completed.
-     Management Agent was successfully registered using key YourFleetName (ocid1.managementagentinstallkey.oc1.iad.<some ocid hash>).
-     Assigned JMS Fleet is YourFleetName (ocid1.jmsfleet.oc1.iad.<some ocid hash>).
-     ```
+    ```
+    ...
+    Oracle Cloud Agent plugin 'Oracle Java Management Service' installation has been completed.
+    Oracle Cloud Agent plugin 'Management Agent' installation has been completed.
+    Management Agent plugin 'Java Usage Tracking' installation has been completed.
+    Management Agent was successfully registered using key YourFleetName (ocid1.managementagentinstallkey.oc1.iad.<some ocid hash>).
+    Assigned JMS Fleet is YourFleetName (ocid1.jmsfleet.oc1.iad.<some ocid hash>).
+    ```
 
-5. Remove the installation script.
+6. Remove the installation script.
       ```
      <copy>
      rm ./JMS_<your-fleet-name>_Linux.sh
@@ -227,4 +235,4 @@ You may now **proceed to the next lab.**
 ## Acknowledgements
 
 - **Author** - Yixin Wei, Java Management Service
-- **Last Updated By** - Bao Jin Lee, January 2023
+- **Last Updated By** - Ivan Eng, March 2023

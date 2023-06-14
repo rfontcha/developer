@@ -1,4 +1,4 @@
-# Create Pages to Display Your Data
+# Create pages to display your data
 
 ## Introduction
 
@@ -47,23 +47,23 @@ Let's create a table to display your departments on the main-start page. The Tab
 
    ![A Table component is being dragged onto the page canvas.](images/department-add-table.png "")
 
-    A table with some sample data is added to the page. We'll use this table to display three columns that map to the department business object's id, department, and location fields.
+    A table with some sample data is added to the page. We'll use this table to display three columns that show a department's id, name, and location.
 
 6. Select the table if necessary, then click **Add Data** in the Properties pane to open the Add Data Quick Start.
 
     ![Quick Start menu for a new Table. The Add Data quick start is the only option available for selection.](images/department-add-data-quick-start.png "")
 
-    Quick Starts simplify complex processes to quickly build common functionality that every application provides. Here, we'll use the Add Data Quick Start to connect your table to the Department business object and display that data. The Quick Start wizard will prompt you to select your data source, select the fields from the business object that you want to show in your table, and filter data (which we won't do here).
+    Quick Starts simplify things so you can quickly build common functionality that every application provides. Here, we'll use the Add Data Quick Start to connect your table to the Department business object and display that data. The Quick Start wizard will prompt you to select your data source, select the fields from the business object that you want to show in your table, and filter data (which we won't do here).
 
 7. On the Locate Data step of the Add Data wizard, select **Department** under Business Objects, then click **Next**.
 
     ![Part of the Locate Data page of the Add Data quick start. The Department business object is selected.](images/department-add-data.png "")
 
-8. On the Bind Data step, under item\[i\], select **id** and **department** (in that order). These two fields will show as columns in your Departments table.
+8. On the Bind Data step, under item\[i\], select **id** and **department** (in that order). The two fields are added as Columns for your Departments table.
 
    ![The Bind Data page of the Add Data quick start. The id and department check boxes are selected. In the Columns list, the columns are id and department.](images/department-add-data-selectfields.png "name")
 
-9. Expand the **locationObject** and **items** nodes (expand **item\[i\]** if it isn't already expanded) and select **location**. Because we created a reference-type field from the Department business object to the Location business object, the Location field is now available to us through the locationObject accessor, which lets us traverse relationships between the two objects. Click **Next**.
+9. Expand the **locationObject** and **items** nodes (expand **item\[i\]** if it isn't already expanded) and select **location**. Because we created a reference-type field from the Department business object to the Location business object, the Location field is now available to us through the locationObject accessor (which lets us traverse relationships between the two objects). Click **Next**.
 
     ![This image shows part of the Bind Data page of the Add Data quick start after the locationObject node has been expanded. The location check box is selected. In the Columns list, location appears at the bottom of the list.](images/department-add-data-selectitemfields.png "name")
 
@@ -105,7 +105,7 @@ Now that we have a way to show departments, we'll add a Create page that lets us
 
     ![Web application's main flow, with the main-start page pointing to the main-create-department page.](images/department-add-create-mainflow.png "")
 
-    **Tip:** A page that's marked with a warning triangle usually indicates that the page's code has issues that you might want to review. For example, the warning for the main-start page here relates to a translation issue, which you can safely ignore. If you want, click **Audits** at the bottom of the screen to review and resolve issues in the Audits pane. You can also select messages that you don't want to be flagged and disable reporting for those messages in the Code editor.
+    **Tip:** A page that's marked with a warning triangle usually indicates that the page's code has issues that you might want to review. For example, the warnings for the main-start and main-create-department pages here relate to a translation issue, which you can safely ignore. If you want, click **Audits** at the bottom of the screen to review and resolve issues in the Audits pane. You can also select warnings you don't want flagged and disable reporting for those messages in the Audits Menu ![Audits Menu icon](images/audits-menu-icon.png).
 
 8. Double-click the **main-start** tile to open the page (you can also click the page in the Web Apps pane, click the **main-start** tab just below the header if it's visible, or click ![Tab icon icon](images/overflow-tab-icon.png) in the tab bar and select the page in the drop-down list). Now click **Reload Design Preview** ![Reload Design Preview icon](images/reload-icon.png) to see the department you created.
 
@@ -119,7 +119,7 @@ We'll now create a page to display employees, similar to the one you created to 
 
     ![Web application with the main node expanded. The + sign next to main is selected to show the Create Page and Create Flow options.](images/create-page.png "")
 
-2. In the Create Page dialog box, enter `employees` in the **Page ID** field after the **main-** prefix and click **Create**.
+2. In the Create Page dialog box, add `employees` in the **Page ID** field after the **main-** prefix and click **Create**.
 
     ![The Create Page dialog box is shown, with main-employees entered in the Page ID field, and the Create button selected.](images/employees-create-page.png "")
 
@@ -133,7 +133,7 @@ We'll now create a page to display employees, similar to the one you created to 
 
     ![A panel component on the page, with the pane's resize cursor being dragged to resize it to seven columns.](images/panel-on-page-resize.png "")
 
-6. Now let's add our table. This time, instead of using the Components palette, let's use the Data palette, which provides a *data-first approach* to UI design. The Data palette provides access to your business objects and allows you to drag and drop them onto the canvas to create UI components that readily map to them. To see this in action, click the **Data** tab, then expand **Business Objects** and **Employee**.
+6. Now let's add our table. This time, instead of using the Components palette, let's use the Data palette, which provides a *data-first approach* to UI design. The Data palette provides access to your business objects, so you can drag and drop them onto the canvas and readily map them to UI components. To see this in action, click the **Data** tab, then expand **Business Objects** and **Employee**.
 
     ![The Data palette, with the Employee business object under Business Objects  expanded to show its REST endpoints.](images/data-palette-employee-object.png "")
 
@@ -143,7 +143,7 @@ We'll now create a page to display employees, similar to the one you created to 
 
     ![The Render as pop-up shows the following options: Table Dynamic, List Dynamic, Table, and List. ](images/data-palette-employee-object-table.png "")
 
-8. Select **Table** in the pop-up menu (the second Table option, not Table Dynamic) to open the Add Data quick start.  This quick start is similar to the one you used before to create the departments table, except that you don't need to associate a data source.
+8. Select **Table** (not Table Dynamic) in the pop-up menu to open the Add Data quick start.  This quick start is similar to the one you used before to create the departments table, except that you don't need to associate a data source.
 
 9. On the Bind Data step of the Add Data wizard, select **picture** and **name** under item\[i\].
 
@@ -179,7 +179,7 @@ Now that you've displayed some employee data in a table, let's add a chart to vi
 
    ![The sample Bar Chart is expanded to take up the entire panel. With the Bar Chart selected, its Properties pane shows on the right on the Quick Start tab. ](images/panel-on-page-chart-resize.png "")
 
-4. In the Properties pane, click **Add Data** to open the Add Data Quick Start.
+4. In the Properties pane's Quick Start tab, click **Add Data** to open the Add Data Quick Start.
 
 5. On the Locate Data step of the Quick Start, select **Employee** under Business Objects and click **Next**.
 
@@ -212,15 +212,15 @@ Add a Create page that lets your users create new employees.
     A **Create Employee** button appears above the table, and the **main-create-employee** page appears in the pages list.
 
 5. In the pages list, click the **main-create-employee** page to open it in the Page Designer.
-6. Click within the form on the page but outside of a component (that is, in the Form Layout component on the page). In the **General** tab of the Form Layout's properties, set the **Max Columns** value to **2**.
+6. Click within the form on the page but outside of a component (that is, in the Form Layout component on the page). In the **General** tab of the Form Layout's properties, set the **Columns** value to **2**.
 
-    ![The Form Layout component is selected on the main-create-employee page. The Max Columns field in the General tab of the Properties pane is set to 2, so that the employee fields show in two columns on the page.](images/employees-add-create-max-columns.png "")
+    ![The Form Layout component is selected on the main-create-employee page. The Columns field in the General tab of the Properties pane is set to 2, so that the employee fields show in two columns on the page.](images/employees-add-create-max-columns.png "")
 
-    The fields now appear in two columns. If you don't see the change, click **Properties** to hide the Properties pane and expand your view.
+    The fields now appear in two columns.
 
 7. Click **Live** to make the form active. Enter or select the following (you can use other data if you wish):
     * **Name**: `Walter`
-    * **Picture**: `https://www.oracle.com/webfolder/technetwork/jet/images/hcm/placeholder-male-05.png`
+    * **Picture**: `https://www.oracle.com/webfolder/technetwork/jet/content/images/hcm/placeholder-male-05.png`
     * **Hire Date**:  Select today's date
     * **Email**: `walter@example.com`
     * **Department**: `IT`
@@ -238,11 +238,11 @@ Add a Create page that lets your users create new employees.
 
     ![The HTML code for the main-employees page is shown.](images/employees-add-create-code.png "")
 
-    Select the **oj-bind-text** value (at the top) and change `Employees` to `My Employees`, then click **Design** to see your changes reflected in the page's visual editor.
+    Select the **oj-bind-text** value in line 34 and change `Employees` to `My Employees`:
 
     ![The \<oj-bind-text>\ component code is shown, with its value changed to My Employees. ](images/employees-code-view-changetitle.png "")
 
-     Whichever mode you choose to work in (visual or source code), your changes are synced to keep both views consistent.
+     Now click **Design** to see your changes reflected in the page's visual editor. Whichever mode you choose to work in (visual or source code), your changes are synced to keep both views consistent.
 
 10. Click **Structure** to view the structure of components on the main-employees page. Components that aren't currently visible on the page fade into the background to allow you to focus on parts of a page, a section at a time.
 
@@ -265,11 +265,11 @@ It makes sense at this point to change the name of the main-start page to main-d
 
     ![The Source view pane, with the webApps, hrwebapp, flows, and main nodes expanded, is shown. The main-flow.json file has been selected and is open. In it, the 'defaultPage' property is set to the value 'main-departments'.](images/mainflow-json.png "")
 
-    You can see that the `defaultPage` property has been set to the value `main-departments`, making it the starting page for the web application flow. (If we'd looked before, it would have been set to `main-start`.)
+    You can see that the **defaultPage** property has been set to the value **main-departments**, making it the starting page for the web application flow. If we'd looked before, it would have been set to **main-start**.
 
     You may **proceed to the next lab**.
 
 ## Acknowledgements
 
 * **Author** - Sheryl Manoharan, VB Studio User Assistance, November 2021
-* **Last Updated By/Date** - Sheryl Manoharan, November 2022
+* **Last Updated By/Date** - Sheryl Manoharan, May 2023
